@@ -1,6 +1,6 @@
 # Submissions API
 
-Read your form submissions programmatically — including metadata like IP address. This is a **read-only** REST API, separate from the form submission endpoint.
+Read your form submissions programmatically — including metadata like user IP address. This is a **read-only** REST API, separate from the form submission endpoint.
 
 {% hint style="info" %}
 The Submissions API is a **PRO feature**. Create and manage API keys from your [dashboard](https://app.web3forms.com/account/api-keys).
@@ -29,9 +29,9 @@ Your API key is shown **only once** when you create it. Store it somewhere safe.
 
 Go to **Dashboard → Account → API Keys**:
 
-- **Create** a key — give it a label (e.g. "Production backend"). The full key is shown once.
-- **Revoke** a key — takes effect immediately; any request using it returns `401`.
-- You can hold up to **10 active keys** at a time.
+* **Create** a key — give it a label (e.g. "Production backend"). The full key is shown once.
+* **Revoke** a key — takes effect immediately; any request using it returns `401`.
+* You can hold up to **10 active keys** at a time.
 
 A key is scoped to your account and can read submissions for any form you own.
 
@@ -39,7 +39,7 @@ A key is scoped to your account and can read submissions for any form you own.
 
 Requests are throttled at **20 requests/second** (burst 50) per account. Exceeding this returns `429` with a `Retry-After` header (in seconds).
 
----
+***
 
 ## List forms
 
@@ -62,7 +62,7 @@ Returns all forms you own.
 }
 ```
 
----
+***
 
 ## List submissions
 
@@ -72,11 +72,11 @@ Returns submissions for a form, newest first.
 
 #### Query Parameters
 
-| Name                                      | Type    | Description                                  |
-| ----------------------------------------- | ------- | -------------------------------------------- |
-| form_id<mark style="color:red;">\*</mark> | string  | The form to fetch submissions for.           |
-| limit                                     | integer | Page size. Default `50`, min `1`, max `100`. |
-| cursor                                    | string  | Pagination cursor from a previous response.  |
+| Name                                       | Type    | Description                                  |
+| ------------------------------------------ | ------- | -------------------------------------------- |
+| form\_id<mark style="color:red;">\*</mark> | string  | The form to fetch submissions for.           |
+| limit                                      | integer | Page size. Default `50`, min `1`, max `100`. |
+| cursor                                     | string  | Pagination cursor from a previous response.  |
 
 #### Example
 
@@ -119,7 +119,7 @@ curl "https://api.web3forms.com/v1/submissions?form_id=FORM_ID&cursor=NEXT_CURSO
   -H "Authorization: Bearer w3f_live_…"
 ```
 
----
+***
 
 ## Get a submission
 
@@ -151,7 +151,7 @@ curl "https://api.web3forms.com/v1/submissions/sub_a1b2c3d4e5f6" \
 }
 ```
 
----
+***
 
 ## Errors
 
