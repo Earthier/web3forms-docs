@@ -51,6 +51,7 @@
     * [Airtable](getting-started/integrations/soon/airtable.md)
 * [Options Reference](getting-started/options-reference.md)
 * [API Reference](getting-started/api-reference.md)
+* [Submissions API](getting-started/submissions-api.md)
 * [Troubleshooting](getting-started/troubleshooting.md)
 * [FAQ](getting-started/faq.md)
 
