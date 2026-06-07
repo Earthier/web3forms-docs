@@ -1,6 +1,6 @@
 # reCaptcha Integration
 
-Web3forms supports Google's reCaptcha v3 for forms.&#x20;
+Web3forms supports Google's reCaptcha v3 for forms.
 
 **Codepen Demo**: [https://codepen.io/surjithctly/pen/BaZQLyR](https://codepen.io/surjithctly/pen/BaZQLyR)
 
@@ -10,13 +10,13 @@ Heads Up! This is a PRO feature. You must have an active subscription to use thi
 
 ### Generate reCaptcha Keys <a href="#add-the-turnstile-widget-to-your-site" id="add-the-turnstile-widget-to-your-site"></a>
 
-To setup, first you should register your domain on Google reCaptcha  and generate API keys from their website. Go to [reCaptcha Website](https://www.google.com/recaptcha/admin/create) to create new keys. Choose reCaptcha v3 from the option. Add your domain name and submit to create your keys. **You will need both Site Key and Secret Key**. Copy those code and save it in your notepad. We will need this later.&#x20;
+To setup, first you should register your domain on Google reCaptcha and generate API keys from their website. Go to [reCaptcha Website](https://www.google.com/recaptcha/admin/create) to create new keys. Choose reCaptcha v3 from the option. Add your domain name and submit to create your keys. **You will need both Site Key and Secret Key**. Copy those code and save it in your notepad. We will need this later.
 
-![Registering reCaptcha](<../../.gitbook/assets/image (4) (2) (2) (2) (2).png>)
+![Registering reCaptcha](<../../.gitbook/assets/image (4) (2) (2) (2).png>)
 
-### Client-side Integration  <a href="#add-the-turnstile-widget-to-your-site" id="add-the-turnstile-widget-to-your-site"></a>
+### Client-side Integration <a href="#add-the-turnstile-widget-to-your-site" id="add-the-turnstile-widget-to-your-site"></a>
 
-Now open your HTML file where your form exists and paste the following code just before the closing of `</body>` tag.&#x20;
+Now open your HTML file where your form exists and paste the following code just before the closing of `</body>` tag.
 
 <pre class="language-markup"><code class="lang-markup">&#x3C;!-- Recaptcha v3 -->
 
@@ -37,7 +37,7 @@ Now open your HTML file where your form exists and paste the following code just
 Now replace `YOUR_SITE_KEY_HERE` with your actual Site key you've obtained from the reCaptcha Website. You need to replace it in two places above. `LINE 3` & `LINE 6`
 
 {% hint style="warning" %}
-Heads Up! You'll need to change the SITE KEY in two places in the above code.&#x20;
+Heads Up! You'll need to change the SITE KEY in two places in the above code.
 {% endhint %}
 
 Now add the following code inside your `<form>` tag.
@@ -53,14 +53,12 @@ Now add the following code inside your `<form>` tag.
 3. Enter the **Secret Key** in the Textbox below
 4. Save Changes
 
-That's it. Your form will automatically be protected with reCaptcha v3.&#x20;
+That's it. Your form will automatically be protected with reCaptcha v3.
 
-
-
-That's it. Now test your form and it should work without any extra configuration.&#x20;
+That's it. Now test your form and it should work without any extra configuration.
 
 #### How to know the reCaptcha is working as expected?
 
-To test, right click the page and choose **Inspect Element**. Now inspect the `<form>` part where the above `recaptcha_response` will be populated with a large key value. If you don't see that, check `console.log()` for more info.&#x20;
+To test, right click the page and choose **Inspect Element**. Now inspect the `<form>` part where the above `recaptcha_response` will be populated with a large key value. If you don't see that, check `console.log()` for more info.
 
 [^1]: update site key here
